@@ -26,7 +26,6 @@
       overflow-x: hidden;
     }
 
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
@@ -38,7 +37,7 @@
       border-radius: 10px;
     }
 
-    /* Navbar modern */
+    /* Navbar */
     .navbar {
       background: rgba(5, 11, 26, 0.85);
       backdrop-filter: blur(12px);
@@ -66,7 +65,7 @@
       transform: translateY(-2px);
     }
 
-    /* Hero section */
+    /* Hero */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -89,10 +88,7 @@
       0% { opacity: 0.3; transform: scale(1);}
       100% { opacity: 0.7; transform: scale(1.1);}
     }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+    .hero-content { position: relative; z-index: 2; }
     .badge-code {
       background: rgba(59,130,246,0.2);
       backdrop-filter: blur(4px);
@@ -103,11 +99,7 @@
       font-weight: 500;
       border: 1px solid rgba(59,130,246,0.5);
     }
-    .hero h1 {
-      font-size: 3.8rem;
-      font-weight: 800;
-      line-height: 1.2;
-    }
+    .hero h1 { font-size: 3.8rem; font-weight: 800; line-height: 1.2; }
     .hero h1 span {
       background: linear-gradient(135deg, #FFFFFF, #3B82F6, #A855F7);
       -webkit-background-clip: text;
@@ -140,17 +132,9 @@
       font-weight: 600;
       transition: 0.3s;
     }
-    .btn-outline-sky:hover {
-      background: #3b82f6;
-      color: white;
-      transform: translateY(-3px);
-    }
+    .btn-outline-sky:hover { background: #3b82f6; color: white; transform: translateY(-3px); }
 
-    /* Section */
-    section {
-      padding: 100px 0;
-      position: relative;
-    }
+    section { padding: 100px 0; position: relative; }
     .section-title {
       font-size: 2.8rem;
       font-weight: 800;
@@ -160,13 +144,9 @@
       background-clip: text;
       color: transparent;
     }
-    .section-sub {
-      color: #94a3b8;
-      max-width: 700px;
-      margin: 0 auto 3rem auto;
-    }
+    .section-sub { color: #94a3b8; max-width: 700px; margin: 0 auto 3rem auto; }
 
-    /* Project Card Glassmorphism */
+    /* Project Card */
     .project-card {
       background: rgba(15, 23, 42, 0.55);
       backdrop-filter: blur(12px);
@@ -184,7 +164,7 @@
       box-shadow: 0 25px 40px -12px #0f172a80;
     }
     .project-img-placeholder {
-      height: 180px;
+      height: 160px;
       background: linear-gradient(135deg, #0f172a, #1e293b);
       display: flex;
       align-items: center;
@@ -207,22 +187,17 @@
     .github-link {
       color: #60a5fa;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
     }
-    .github-link:hover {
-      color: white;
-      text-decoration: underline;
-    }
+    .github-link:hover { color: white; text-decoration: underline; }
 
-    /* Skills progress bar */
-    .skill-item {
-      margin-bottom: 1.5rem;
-    }
-    .skill-name {
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+    /* Skills */
+    .skill-item { margin-bottom: 1.5rem; }
+    .skill-name { font-weight: 600; margin-bottom: 8px; }
     .progress-bar-custom {
       height: 8px;
       background: #1e293b;
@@ -237,7 +212,7 @@
       transition: width 1s ease;
     }
 
-    /* Service Icons */
+    /* Service */
     .service-icon {
       font-size: 2.5rem;
       background: linear-gradient(145deg, #1e293b, #0f172a);
@@ -258,7 +233,6 @@
       backdrop-filter: blur(8px);
       border-radius: 2rem;
       border: 1px solid #1e2a4a;
-      transition: 0.2s;
     }
     .social-icon {
       background: #111827;
@@ -273,15 +247,8 @@
       font-size: 1.3rem;
       margin-right: 12px;
     }
-    .social-icon:hover {
-      background: #2563eb;
-      transform: translateY(-5px);
-    }
-    footer {
-      background: #020617;
-      padding: 40px 0;
-      border-top: 1px solid #1e293b;
-    }
+    .social-icon:hover { background: #2563eb; transform: translateY(-5px); }
+    footer { background: #020617; padding: 40px 0; border-top: 1px solid #1e293b; }
 
     @media (max-width: 768px) {
       .hero h1 { font-size: 2.4rem; }
@@ -296,7 +263,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">ARI-DEV</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -317,35 +284,33 @@
 <section id="home" class="hero">
   <div class="container hero-content">
     <div class="row align-items-center">
-      <div class="col-lg-7" data-aos="fade-up" data-aos-duration="1000">
+      <div class="col-lg-7" data-aos="fade-up">
         <span class="badge-code mb-3"><i class="fas fa-code me-2"></i>Fullstack & Mobile Dev</span>
         <h1 class="mt-3">Hi, I'm <span>Ari Reivansyah</span><br>Android & Backend Expert</h1>
-        <p class="lead my-4 text-light-50" style="color:#b9c7d9">I build responsive web, Android apps, and scalable backend systems. Passionate about creating real impact through technology.</p>
+        <p class="lead my-4" style="color:#b9c7d9">I build responsive web, Android apps, and scalable backend systems. 10+ projects, 2 startups founded.</p>
         <div class="d-flex gap-3 flex-wrap">
           <a href="#contact" class="btn btn-glow"><i class="fas fa-paper-plane me-2"></i>Hire Me</a>
           <a href="#projects" class="btn btn-outline-sky"><i class="fas fa-arrow-right me-2"></i>View Projects</a>
         </div>
       </div>
-      <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-        <div class="position-relative">
-          <img src="https://placehold.co/400x400/0f172a/3b82f6?text=Ari+Dev&font=montserrat" alt="Ari" class="img-fluid rounded-circle border border-4 border-primary shadow-lg" style="width: 280px; height: 280px; object-fit: cover;">
-        </div>
+      <div class="col-lg-5 text-center mt-5 mt-lg-0" data-aos="fade-left">
+        <img src="https://placehold.co/400x400/0f172a/3b82f6?text=Ari+Dev" alt="Ari" class="img-fluid rounded-circle border border-4 border-primary shadow-lg" style="width: 280px; height: 280px; object-fit: cover;">
       </div>
     </div>
   </div>
 </section>
 
-<!-- About Section -->
+<!-- About -->
 <section id="about" style="background: #03071c;">
   <div class="container">
     <div class="row g-5 align-items-center">
       <div class="col-md-6" data-aos="fade-right">
-        <img src="https://placehold.co/600x500/111c33/3b82f6?text=Code+%26+Create" alt="About me" class="img-fluid rounded-4 shadow-lg" style="border: 1px solid #2d3a66;">
+        <img src="https://placehold.co/600x500/111c33/3b82f6?text=Code+%26+Create" alt="About" class="img-fluid rounded-4 shadow-lg" style="border: 1px solid #2d3a66;">
       </div>
       <div class="col-md-6" data-aos="fade-left">
         <h2 class="section-title text-start">About Me</h2>
-        <p class="text-secondary mb-3">I'm a passionate developer from Jakarta, Indonesia, currently studying Software Engineering at SMKN 24 Jakarta. With real-world startup experience, I've co-founded Re-Code and Neoroza, bringing digital solutions for schools and businesses.</p>
-        <p class="text-secondary mb-3">My focus: Kotlin (Jetpack Compose, XML), Laravel, Go, Express.js, React Native, and modern frontend. Building impactful products is my driving force.</p>
+        <p class="text-secondary mb-3">I'm a passionate developer from Jakarta, currently studying Software Engineering at SMKN 24 Jakarta. Co-founded Re-Code and Neoroza, building digital solutions for schools and businesses.</p>
+        <p class="text-secondary mb-3">Tech stack: Kotlin, C#, Go, Laravel, Express.js, React Native, React, PHP, MySQL.</p>
         <div class="row mt-4">
           <div class="col-6">
             <ul class="list-unstyled">
@@ -368,12 +333,12 @@
   </div>
 </section>
 
-<!-- Resume Section -->
+<!-- Resume -->
 <section id="resume">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
       <h2 class="section-title">Resume & Experience</h2>
-      <p class="section-sub">My journey in software development, from student projects to startup co-founder</p>
+      <p class="section-sub">My journey in software development, from student to startup co-founder</p>
     </div>
     <div class="row mt-5">
       <div class="col-md-6" data-aos="fade-right">
@@ -381,226 +346,250 @@
           <span class="badge bg-primary mb-2">2023 - 2026</span>
           <h4>Software Engineering Student</h4>
           <p class="fw-semibold text-info">SMKN 24 Jakarta</p>
-          <p>Developed expertise in mobile, web, desktop, and game development. Worked on team projects and built foundational full-stack skills.</p>
+          <p>Full-stack, mobile, game development with team-based projects.</p>
         </div>
         <div class="border-start border-primary ps-4 mb-5">
           <span class="badge bg-primary mb-2">Aug 2024 - Nov 2025</span>
           <h4>Android Dev & Co-Founder</h4>
           <p class="fw-semibold text-info">Re-Code Startup</p>
-          <p>Co-founded Re-Code, built Ventra POS and Geofencing Attendance App used by Fashion Department of SMKN 24.</p>
+          <p>Built Ventra POS & geofencing attendance app for school department.</p>
         </div>
         <div class="border-start border-primary ps-4">
           <span class="badge bg-primary mb-2">Jan 2026 - Jun 2026</span>
-          <h4>Backend Developer Intern</h4>
+          <h4>Backend Intern</h4>
           <p class="fw-semibold text-info">Bentang Inovasi Teknologi</p>
-          <p>Worked with C#, .NET, Blazor, SQL Server. Handled API integration, debugging, and enterprise-level maintainability.</p>
+          <p>C#, .NET, Blazor, SQL Server, API integration & enterprise debugging.</p>
         </div>
       </div>
       <div class="col-md-6" data-aos="fade-left">
         <div class="border-start border-primary ps-4 mb-5">
           <span class="badge bg-primary mb-2">Aug 2025 - Dec 2025</span>
-          <h4>Android & Lead Developer</h4>
+          <h4>Android Lead Developer</h4>
           <p class="fw-semibold text-info">Neoroza Startup</p>
-          <p>Led Android team to build Zeraxa exam app with Google Form integration and built-in exam system with analytics.</p>
+          <p>Led Zeraxa exam app (Jetpack Compose + Laravel backend).</p>
         </div>
         <div class="border-start border-primary ps-4">
           <span class="badge bg-primary mb-2">Nov 2025</span>
-          <h4>Bootcamp Finalist (JIHS)</h4>
-          <p>Developed BangkitCell (Go Backend + React Web + Kotlin Android) – transaction management system.</p>
-          <p class="mt-2"><i class="fas fa-trophy text-warning me-1"></i> 10+ Projects Completed, 2 Startups Founded</p>
+          <h4>JIHS Bootcamp Finalist</h4>
+          <p>BangkitCell: Go backend + React web + Kotlin Android (service management).</p>
+          <p class="mt-2"><i class="fas fa-trophy text-warning"></i> 10+ Projects, 2 Startups</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
+<!-- Services -->
 <section id="services" style="background:#080e1c">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
       <h2 class="section-title">What I Do</h2>
-      <p class="section-sub">Turning ideas into digital reality with modern tech stack</p>
+      <p class="section-sub">Modern tech stack for real-world solutions</p>
     </div>
     <div class="row g-4">
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="contact-card p-4 text-center">
-          <div class="service-icon mx-auto"><i class="fab fa-android"></i></div>
-          <h4>Android Dev</h4>
-          <p>Kotlin (XML & Jetpack Compose), Room, Retrofit, Firebase & geofencing apps.</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="contact-card p-4 text-center">
-          <div class="service-icon mx-auto"><i class="fas fa-globe"></i></div>
-          <h4>Web & Backend</h4>
-          <p>PHP, Laravel, Go, Express.js, MySQL, REST APIs, authentication.</p>
-        </div>
-      </div>
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="contact-card p-4 text-center">
-          <div class="service-icon mx-auto"><i class="fas fa-mobile-alt"></i></div>
-          <h4>React Native</h4>
-          <p>Cross-platform mobile apps, real-time sync, workshop solutions & more.</p>
-        </div>
-      </div>
+      <div class="col-md-4" data-aos="zoom-in"><div class="contact-card p-4 text-center"><div class="service-icon mx-auto"><i class="fab fa-android"></i></div><h4>Android Dev</h4><p>Kotlin, Jetpack Compose, XML, Firebase, geofencing.</p></div></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100"><div class="contact-card p-4 text-center"><div class="service-icon mx-auto"><i class="fas fa-globe"></i></div><h4>Backend & API</h4><p>Go, Laravel, Express.js, REST APIs, MySQL/PostgreSQL.</p></div></div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200"><div class="contact-card p-4 text-center"><div class="service-icon mx-auto"><i class="fas fa-mobile-alt"></i></div><h4>React Native</h4><p>Cross-platform mobile apps for workshop, business, etc.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- Skills Section -->
+<!-- Skills -->
 <section id="skills">
   <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title">Technical Proficiency</h2>
-      <p class="section-sub">Always learning, constantly improving — tools I master</p>
-    </div>
+    <div class="text-center mb-5" data-aos="fade-up"><h2 class="section-title">Technical Proficiency</h2><p class="section-sub">Always learning, constantly improving</p></div>
     <div class="row">
       <div class="col-md-6" data-aos="fade-right">
         <div class="skill-item"><div class="skill-name">Kotlin / Android</div><div class="progress-bar-custom"><div class="progress-fill" data-width="88"></div></div></div>
         <div class="skill-item"><div class="skill-name">PHP & Laravel</div><div class="progress-bar-custom"><div class="progress-fill" data-width="85"></div></div></div>
         <div class="skill-item"><div class="skill-name">Go (Golang)</div><div class="progress-bar-custom"><div class="progress-fill" data-width="75"></div></div></div>
         <div class="skill-item"><div class="skill-name">React + TypeScript</div><div class="progress-bar-custom"><div class="progress-fill" data-width="78"></div></div></div>
+        <div class="skill-item"><div class="skill-name">C# </div><div class="progress-bar-custom"><div class="progress-fill" data-width="90"></div></div></div>
       </div>
       <div class="col-md-6" data-aos="fade-left">
         <div class="skill-item"><div class="skill-name">Express.js / Node.js</div><div class="progress-bar-custom"><div class="progress-fill" data-width="82"></div></div></div>
         <div class="skill-item"><div class="skill-name">React Native</div><div class="progress-bar-custom"><div class="progress-fill" data-width="80"></div></div></div>
-        <div class="skill-item"><div class="skill-name">MySQL / PostgreSQL</div><div class="progress-bar-custom"><div class="progress-fill" data-width="90"></div></div></div>
+        <div class="skill-item"><div class="skill-name">MySQL</div><div class="progress-bar-custom"><div class="progress-fill" data-width="90"></div></div></div>
         <div class="skill-item"><div class="skill-name">Git & Collaboration</div><div class="progress-bar-custom"><div class="progress-fill" data-width="88"></div></div></div>
+        <div class="skill-item"><div class="skill-name">Flutter</div><div class="progress-bar-custom"><div class="progress-fill" data-width="70"></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Projects Section (dengan 2 project baru: BangkitCell & Gaspol) -->
+<!-- PROJECTS SECTION - MENAMPILKAN 8 PROJECT LENGKAP -->
 <section id="projects" style="background:#050a17">
   <div class="container">
     <div class="text-center" data-aos="fade-up">
-      <h2 class="section-title">Featured Projects</h2>
-      <p class="section-sub">Real-world apps, startup products, bootcamp final projects & personal creations</p>
+      <h2 class="section-title">My 9 Projects Portfolio</h2>
+      <p class="section-sub">Startup products, bootcamp final projects, and personal creations</p>
     </div>
     <div class="row g-4">
-      <!-- Project BangkitCell (BARU) -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left">
+      
+      <!-- 1. BangkitCell (BARU) -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-store fa-3x"></i></div>
           <div class="p-4">
-            <h5 class="fw-bold">📱 BangkitCell - Service Management</h5>
-            <p class="small text-light">Web + Android app for service transaction & income recording. Built as JIHS Bootcamp final project. Backend: Golang, Web: React+Vite+TS, Android: Kotlin.</p>
-            <div>
-              <span class="tech-badge">Go</span>
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">TypeScript</span>
-              <span class="tech-badge">Kotlin</span>
-            </div>
-            <div class="mt-2">
-              <a href="https://github.com/AriReiva/BangkitcellBe" target="_blank" class="github-link me-3"><i class="fab fa-github"></i> Backend Repo</a>
-              <a href="https://github.com/Angger-Firlana/bangkit-cell-web" target="_blank" class="github-link"><i class="fab fa-github"></i> Web Frontend</a>
+            <h5 class="fw-bold">📱 BangkitCell</h5>
+            <p class="small text-light">Web + Android service transaction management. JIHS Bootcamp final project. Backend Go, web React+Vite+TS, Android Kotlin.</p>
+            <div><span class="tech-badge">Go</span><span class="tech-badge">React</span><span class="tech-badge">TypeScript</span><span class="tech-badge">Kotlin</span></div>
+            <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/BangkitcellBe" target="_blank" class="github-link"><i class="fab fa-github"></i> Backend</a>
+              <a href="https://github.com/Angger-Firlana/bangkit-cell-web" target="_blank" class="github-link"><i class="fab fa-github"></i> Web</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Gaspol (BARU) -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="100">
+      <!-- 2. Gaspol (BARU) -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="100">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-motorcycle fa-3x"></i></div>
           <div class="p-4">
-            <h5 class="fw-bold">🛵 Gaspol - Workshop Service System</h5>
-            <p class="small text-light">Motorcycle repair workshop system: customer mobile app (React Native) + web dashboard (Express.js backend). Helps manage inventory, service records, and roadside assistance requests.</p>
-            <div>
-              <span class="tech-badge">Express.js</span>
-              <span class="tech-badge">React Native</span>
-              <span class="tech-badge">REST API</span>
-              <span class="tech-badge">Node.js</span>
-            </div>
-            <div class="mt-2">
-              <a href="https://github.com/AriReiva/gaspol" target="_blank" class="github-link me-3"><i class="fab fa-github"></i> Mobile Repo</a>
-              <a href="https://github.com/AriReiva/gaspol_be" target="_blank" class="github-link"><i class="fab fa-github"></i> Backend Repo</a>
+            <h5 class="fw-bold">🛵 Gaspol</h5>
+            <p class="small text-light">Motorcycle workshop system: customer app (React Native) + web dashboard (Express.js). Inventory, service records, roadside assistance.</p>
+            <div><span class="tech-badge">Express.js</span><span class="tech-badge">React Native</span><span class="tech-badge">Node.js</span></div>
+            <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/gaspol" target="_blank" class="github-link"><i class="fab fa-github"></i> Mobile</a>
+              <a href="https://github.com/AriReiva/gaspol_be" target="_blank" class="github-link"><i class="fab fa-github"></i> Backend</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Ventra -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="150">
+      <!-- 3. Ventra POS -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="150">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-cash-register fa-3x"></i></div>
           <div class="p-4">
             <h5 class="fw-bold">Ventra – POS App</h5>
-            <p class="small text-light">Point-of-sale for Fashion Dept SMKN 24, stock & barcode management.</p>
+            <p class="small text-light">Point-of-sale for Fashion Dept SMKN 24, barcode scanning & stock management.</p>
             <div><span class="tech-badge">Kotlin</span><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span></div>
+            <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/VentraApp.git" target="_blank" class="github-link"><i class="fab fa-github"></i>Mobile</a>
+              <a href="https://github.com/Iftikhar21/Ventra-Web.git" target="_blank" class="github-link"><i class="fab fa-github"></i>WEB</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Zeraxa -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+      <!-- 4. Zeraxa Exam Platform -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="200">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-graduation-cap fa-3x"></i></div>
           <div class="p-4">
             <h5 class="fw-bold">Zeraxa – Exam Platform</h5>
-            <p class="small text-light">Android exam app with Google Form integration & anti-cheat analytics.</p>
-            <div><span class="tech-badge">Jetpack Compose</span><span class="tech-badge">Laravel</span></div>
+            <p class="small text-light">Android exam app (Jetpack Compose) + Google Form integration & live analytics.</p>
+            <div><span class="tech-badge">Jetpack Compose</span><span class="tech-badge">Laravel</span><span class="tech-badge">MySQL</span></div>
+            <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/ExamppApp.git" target="_blank" class="github-link"><i class="fab fa-github"></i> Mobile</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Project Bisnis Center -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="250">
+      <!-- 5. ReCode Geofencing -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="250">
+        <div class="project-card">
+          <div class="project-img-placeholder"><i class="fas fa-map-marker-alt fa-3x"></i></div>
+          <div class="p-4">
+            <h5 class="fw-bold">ReCode Absensi</h5>
+            <p class="small text-light">Geofencing-based attendance app for student presence validation.</p>
+            <div><span class="tech-badge">Kotlin</span><span class="tech-badge">PHP</span><span class="tech-badge">MySQL</span></div>
+            <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/Iftikhar21/Re-Code-Application.git" target="_blank" class="github-link"><i class="fab fa-github"></i> Mobile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Bisnis Center Request System -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="300">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-chart-line fa-3x"></i></div>
           <div class="p-4">
-            <h5 class="fw-bold">Bisnis Center – Request System</h5>
-            <p class="small text-light">Role-based ordering (Admin, Cashier, User) + auto reports & best-selling items.</p>
+            <h5 class="fw-bold">Bisnis Center</h5>
+            <p class="small text-light">Request management with 3 roles (Admin, Cashier, User), auto reports & best-selling items.</p>
             <div><span class="tech-badge">PHP Native</span><span class="tech-badge">Bootstrap</span><span class="tech-badge">MySQL</span></div>
           </div>
         </div>
       </div>
 
-      <!-- Project Brainjet -->
-      <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="300">
+      <!-- 7. Barinjet Math Shooter -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="350">
         <div class="project-card">
           <div class="project-img-placeholder"><i class="fas fa-gamepad fa-3x"></i></div>
           <div class="p-4">
             <h5 class="fw-bold">Barinjet – Math Shooter</h5>
-            <p class="small text-light">2D jet shooter game solving math questions under time pressure.</p>
+            <p class="small text-light">2D jet shooter game, solve math questions by shooting correct answers.</p>
             <div><span class="tech-badge">Java</span><span class="tech-badge">Swing</span></div>
+             <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/BrainJet.git" target="_blank" class="github-link"><i class="fab fa-github"></i> Mobile</a>
+            </div>
           </div>
         </div>
       </div>
+      <!-- 9. Cup Sans Ultimate Showdown (PROJECT BARU) -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="project-card">
+          <div class="project-img-placeholder"><i class="fas fa-fist-raised fa-3x"></i></div>
+          <div class="p-4">
+            <h5 class="fw-bold">🥤 Cup Sans Ultimate Showdown</h5>
+            <p class="small text-light">A 2D platformer game inspired by Cuphead and Undertale. Built individually using desktop-based tools with pixel art and simple mechanics. Features challenging boss battles and unique art style.</p>
+            <div><span class="tech-badge">Java</span><span class="tech-badge">Pixel Art</span><span class="tech-badge">2D Platformer</span></div>
+            <div class="mt-2">
+              <span class="text-muted small"><i class="fas fa-calendar-alt me-1"></i> March 2024</span>
+              <span class="text-muted small ms-3"><i class="fas fa-users me-1"></i> Team Project</span>
+            </div>
+             <div class="mt-2 d-flex gap-2 flex-wrap">
+              <a href="https://github.com/AriReiva/CupSansUltimateShotdown.git" target="_blank" class="github-link"><i class="fab fa-github"></i> Mobile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Personal Portfolio (Laravel + Tailwind) -->
+      <div class="col-lg-4 col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="project-card">
+          <div class="project-img-placeholder"><i class="fas fa-laptop-code fa-3x"></i></div>
+          <div class="p-4">
+            <h5 class="fw-bold">Portfolio Laravel</h5>
+            <p class="small text-light">Modern portfolio website built with Laravel, Blade, Tailwind CSS, and MySQL.</p>
+            <div><span class="tech-badge">Laravel</span><span class="tech-badge">Tailwind</span><span class="tech-badge">Blade</span></div>
+            <div class="mt-2"><a href="#" class="github-link"><i class="fab fa-github"></i> GitHub Repo (private)</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Ringkasan jumlah project -->
+    <div class="text-center mt-5 pt-3">
+      <div class="badge-code d-inline-flex gap-2"><i class="fas fa-check-circle"></i> 9 Projects Completed &nbsp;|&nbsp; <i class="fas fa-rocket"></i> 2 Startups</div>
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact">
   <div class="container">
     <div class="text-center mb-5" data-aos="fade-up">
       <h2 class="section-title">Let's Connect</h2>
-      <p class="section-sub">Have a project in mind? Let's bring your idea to life.</p>
+      <p class="section-sub">Got a project? Let's collaborate and build something amazing.</p>
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-8" data-aos="fade-up">
         <div class="contact-card p-5">
           <div class="row text-center">
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-map-marker-alt fa-2x text-primary mb-2"></i>
-              <h6>Jakarta, Indonesia</h6>
-            </div>
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-phone-alt fa-2x text-primary mb-2"></i>
-              <h6>+62 896-0191-4996</h6>
-            </div>
-            <div class="col-md-4 mb-4">
-              <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
-              <h6>rrardi0202@gmail.com</h6>
-            </div>
+            <div class="col-md-4 mb-4"><i class="fas fa-map-marker-alt fa-2x text-primary mb-2"></i><h6>Jakarta, Indonesia</h6></div>
+            <div class="col-md-4 mb-4"><i class="fas fa-phone-alt fa-2x text-primary mb-2"></i><h6>+62 896-0191-4996</h6></div>
+            <div class="col-md-4 mb-4"><i class="fas fa-envelope fa-2x text-primary mb-2"></i><h6>rrardi0202@gmail.com</h6></div>
           </div>
           <div class="text-center mt-3">
             <a href="https://github.com/AriReiva" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
           </div>
         </div>
       </div>
@@ -611,7 +600,7 @@
 <!-- Footer -->
 <footer>
   <div class="container text-center">
-    <p class="mb-0 text-secondary">© 2025 Ari Reivansyah — Built with <i class="fas fa-heart text-danger"></i> & modern stack. All rights reserved.</p>
+    <p class="mb-0 text-secondary">© 2025 Ari Reivansyah — Built with <i class="fas fa-heart text-danger"></i> & modern stack. All 8 projects showcased.</p>
   </div>
 </footer>
 
@@ -621,28 +610,20 @@
 <script>
   AOS.init({ duration: 800, once: true, offset: 100 });
   
-  // Animate progress bars when visible
   const progressBars = document.querySelectorAll('.progress-fill');
   const animateSkills = () => {
     progressBars.forEach(bar => {
       const width = bar.getAttribute('data-width');
-      if (width && !bar.style.width) {
-        bar.style.width = width + '%';
-      }
+      if (width && !bar.style.width) bar.style.width = width + '%';
     });
   };
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateSkills();
-        observer.disconnect();
-      }
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) { animateSkills(); observer.disconnect(); } });
   }, { threshold: 0.3 });
   const skillsSection = document.querySelector('#skills');
   if (skillsSection) observer.observe(skillsSection);
   
-  // Navbar active link on scroll
+  // Active nav
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
   window.addEventListener("scroll", () => {
